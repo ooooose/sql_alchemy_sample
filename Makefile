@@ -3,7 +3,6 @@ build:
 
 up:
 	docker-compose up -d
-
 down:
 	docker-compose down
 
@@ -15,3 +14,4 @@ logs:
 
 ps:
 	docker-compose ps -a
+
