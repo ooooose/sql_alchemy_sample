@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from src.routers import item
 
 app = FastAPI()
+
+# itemのルーティングを読み込み
 app.include_router(item.router)
 
 
