@@ -77,7 +77,7 @@ async def get_item(item_id: int, db: Session = Depends(get_db)):
     """
     一件取得の場合は、scalar()で取得可能
     以下と同じ結果となる。
-    item = items = db.execute(select(Item)).scalar()
+    item = db.execute(select(Item).where(Item.id == item_id)).scalar()
     item = db.scalars(select(Item).where(Item.id == item_id)).first()
     """
     item = db.scalar(select(Item).where(Item.id == item_id))
