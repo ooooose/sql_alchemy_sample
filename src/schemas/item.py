@@ -2,8 +2,8 @@ from datetime import datetime
 from pydantic import BaseModel, Field
 
 class ItemBase(BaseModel):
-    name: str = Field(None, example='キーボード')
-    description: str = Field(None, example='PCに入力する際に使用するガジェット。')
+    name: str = Field(None, example='ふしぎなアメ')
+    description: str = Field(None, example='食べるとレベルが１アップする')
 
 class Item(ItemBase):
     pass
